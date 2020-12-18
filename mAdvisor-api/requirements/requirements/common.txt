@@ -7,7 +7,7 @@ djangorestframework-jwt==1.11.0
 #pytz==2017.2
 #six==1.11.0
 django-filter==1.0.4
-python-sjsclient==0.8.0
+#python-sjsclient==0.8.0
 pywebhdfs==0.4.1
 Fabric==1.13.2
 Fabric3
