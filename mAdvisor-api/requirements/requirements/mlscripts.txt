@@ -8,7 +8,7 @@ statsmodels==0.9.0
 argparse==1.4.0
 statistics==1.0.3.5
 xgboost==0.82
-#requests==2.21.0
+requests==2.20.0
 #Jinja2==2.10
 pattern==3.6
 pyenchant==2.0.0
