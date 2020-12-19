@@ -12,6 +12,7 @@ requests
 #Jinja2==2.10
 pattern==3.6
 pyenchant==2.0.0
+#numpy
 python-dateutil==2.6.0
 humanize==0.5.1
 pyhocon==0.3.51
