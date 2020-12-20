@@ -11,7 +11,7 @@ RUN groupadd -r marlabs && useradd -r -s /bin/false -g marlabs marlabs
 RUN mkdir /home/mAdvisor/
 WORKDIR /home/mAdvisor/
 
-ADD requirements.tgz /home/mAdvisor/
+#ADD requirements.tgz /home/mAdvisor/
 ADD requirements /home/mAdvisor
 RUN apt-get update
 
@@ -26,7 +26,7 @@ RUN apt-get install virtualenv enchant vim telnet net-tools iputils-ping -y
 RUN apt-get install libmysqlclient-dev -y && apt install postgresql-server-dev-all -y 
 #RUN . myenv/bin/activate &&
 RUN pip3 install -U setuptools
-RUN pip3 install pyenchant && pip3 install -r requirements.txt
+#RUN pip3 install pyenchant && pip3 install -r requirements.txt
 
 RUN apt-get install curl -y
 ADD code.tgz /home/mAdvisor/
