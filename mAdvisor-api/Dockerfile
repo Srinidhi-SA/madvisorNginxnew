@@ -30,6 +30,7 @@ RUN pip3 install pyenchant && pip3 install -r requirements.txt
 
 RUN apt-get install curl -y
 ADD code.tgz /home/mAdvisor/
+ADD code /home/mAdvisor/
 COPY startup.sh /home/mAdvisor/mAdvisor-api/
 RUN chmod +x /home/mAdvisor/mAdvisor-api/startup.sh
 COPY all_apps.json /home/mAdvisor/mAdvisor-api/all_apps.json
