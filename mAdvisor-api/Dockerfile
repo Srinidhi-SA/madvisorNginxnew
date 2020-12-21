@@ -9,6 +9,7 @@ RUN apt-get update \
 RUN groupadd -r marlabs && useradd -r -s /bin/false -g marlabs marlabs
 
 RUN mkdir /home/mAdvisor/
+RUN mkdir /home/mAdvisor/madviosor-api-temp
 WORKDIR /home/mAdvisor/
 
 #ADD requirements.tgz /home/mAdvisor/
@@ -29,8 +30,10 @@ RUN pip3 install -U setuptools
 RUN pip3 install pyenchant && pip3 install -r requirements.txt
 
 RUN apt-get install curl -y
+ADD . /home/mAdvisor/madvisor-api-temp
 ADD code.tgz /home/mAdvisor/
 ADD code /home/mAdvisor/
+
 COPY startup.sh /home/mAdvisor/mAdvisor-api/
 RUN chmod +x /home/mAdvisor/mAdvisor-api/startup.sh
 COPY all_apps.json /home/mAdvisor/mAdvisor-api/all_apps.json
