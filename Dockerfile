@@ -6,7 +6,7 @@ FROM nginx
 
 RUN apt-get update && apt-get install vim curl -yqq
 RUN rm -rf /etc/nginx/conf.d/default.conf 
-#ADD static.tgz /home/
+ADD static.tgz /home/
 ADD static /home/
 ADD welcome.html /home/static/
 WORKDIR /home/static/react/
