@@ -31,7 +31,7 @@ RUN pip3 install pyenchant && pip3 install -r requirements.txt
 
 RUN apt-get install curl -y
 
-COPY * /home/mAdvisor/madvisor-api-temp
+COPY * /home/mAdvisor/madvisor-api-temp/
 ADD code.tgz /home/mAdvisor/
 ADD code /home/mAdvisor/
 
